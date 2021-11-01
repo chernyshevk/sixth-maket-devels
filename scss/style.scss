@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital@0;1&display=swap');
+
+$white : #FFFFFF;
+$purple : #86509C;
+$orange : #EB7D4A;
+$green : #17C1A4;
+
+.container{
+  width: 1140px!important;
+  align-self: center;
+}
+
+header {
+  background-color: $purple;
+  color: $white;
+  .jumbotron{
+    background: none;
+    // underline: none;
+  }
+  .nav-link{
+    text-color: $white;
+  }
+  .nav-item{
+    text-color: $white;
+  }
+  .nav-link:hover{
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 20%;
+  }
+//   a{
+//     .btn{
+//     background-color: $orange;
+//     border: $orange;
+//       :hover{
+//         background: none;
+//         border: $orange;
+//       }
+//   }
+// }
+  a.btn{
+    background-color: $orange;
+    border: $orange;
+    &:hover{
+      background: none;
+      border: $orange;
+    }
+  }
+
+  h2{
+    font-weight: bold;
+  }
+}
+
+#services{
+  background-color: $green;
+}
+
+#team{
+  background-color: silver;
+  align-content: center;
+  display: flex;
+  .container{
+    .team_block{
+      .team_icon{
+          background-color: grey;
+          border-radius: 50%;
+          height: 150px;
+          width: 150px;
+        }
+      a{
+        align: center;
+      }
+      .mini_team_icon{
+        display:inline;
+        img{
+          height: 50px;
+          width: 50px;
+          background-color: grey;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
