@@ -4,6 +4,8 @@ $white : #FFFFFF;
 $purple : #86509C;
 $orange : #EB7D4A;
 $green : #17C1A4;
+$lightgrey: #D3D3D3;
+$grey : #A9A9A9;
 
 .container{
   width: 1140px!important;
@@ -27,16 +29,7 @@ header {
     background-color: rgba(0,0,0,0.2);
     border-radius: 20%;
   }
-//   a{
-//     .btn{
-//     background-color: $orange;
-//     border: $orange;
-//       :hover{
-//         background: none;
-//         border: $orange;
-//       }
-//   }
-// }
+
   a.btn{
     background-color: $orange;
     border: $orange;
@@ -53,16 +46,40 @@ header {
 
 #services{
   background-color: $green;
+  h2{
+    color: $white;
+  }
+  p{
+    color: $white;
+  }
+  .card{
+    background: none;
+    border: none;
+      img{
+        height: 150px;
+        width: 150px;
+        align-self: center;
+      }
+      p{
+        text-align: center;
+        color: $white;
+      }
+      h5{
+        text-align: center;
+        color: $white;
+      }
+  }
 }
 
 #team{
-  background-color: silver;
+  background-color: $lightgrey;
   align-content: center;
   display: flex;
   .container{
     .team_block{
       .team_icon{
-          background-color: grey;
+          margin: auto;
+          background-color: $grey;
           border-radius: 50%;
           height: 150px;
           width: 150px;
@@ -70,15 +87,104 @@ header {
       a{
         align: center;
       }
-      .mini_team_icon{
-        display:inline;
-        img{
-          height: 50px;
-          width: 50px;
-          background-color: grey;
-          border-radius: 50%;
+      .mini_team{
+        display: inline-flex;
+        .mini_team_icon{
+          img{
+            height: 30px;
+            width: 30px;
+            background-color: grey;
+            border-radius: 50%;
+          }
         }
       }
     }
   }
+}
+
+
+// #skills{
+//   .skills_block_90{
+//       .skills_block{
+//         position: relative;
+//         width: 150px;
+//         height: 150px;
+//         border: 10px solid $green;
+//         border-radius: 50%;
+//         margin: auto;
+//         &:before{
+//           // position: absolute;
+//           // top: 100%;
+//           // right: 0;
+//           // width: calc(100% - 100px);
+//         }
+//       }
+//   }
+//   .skills_block_70{
+//     .skills_block{
+//       position: relative;
+//       width: 150px;
+//       height: 150px;
+//       border: 10px solid $grey;
+//       border-radius: 50%;
+//       margin: auto;
+//     }
+//   }
+//   .skills_block_75{
+//     .skills_block{
+//       position: relative;
+//       width: 150px;
+//       height: 150px;
+//       border: 10px solid $purple;
+//       border-radius: 50%;
+//       margin: auto;
+//     }
+//   }
+//   .skills_block_85{
+//     .skills_block{
+//       position: relative;
+//       width: 150px;
+//       height: 150px;
+//       border: 10px solid $orange;
+//       border-radius: 50%;
+//       margin: auto;
+//     }
+//   }
+// }
+
+#skills{
+  .skills_block {
+    display: inline-block;
+    margin: .5em;
+    width: 8em;
+    height: 8em;
+    position: relative;
+    border-radius: 50%;
+      :after {
+        border-radius: 50%;
+        display: block;
+        content: "";
+        background: #fff;
+        position: absolute;
+        left: .5em;
+        top: .5em;
+        height: 7em;
+        width: 7em;
+      }
+.skills_block_90 {
+background-image: linear-gradient(-30deg, $purple 50%, transparent 50%),
+                  linear-gradient(90deg, $purple 50%, $green 50%);
+}
+.skills_block_70 {
+background-image: linear-gradient(90deg, $purple 50%, $green 50%);
+}
+.skills_block_75 {
+background-image: linear-gradient(150deg, transparent 50%, $green 50%),
+                  linear-gradient(90deg, $purple 50%, $green 50%);
+}
+.skills_block_85 {
+background-image: linear-gradient(270deg, transparent 50%, $green 50%),
+                  linear-gradient(180deg, $purple 50%, $green 50%);
+}
+}
 }
