@@ -6,6 +6,12 @@ $orange : #EB7D4A;
 $green : #17C1A4;
 $lightgrey: #D3D3D3;
 $grey : #A9A9A9;
+$peach : #FEDD9A;
+$blue : #3C5598;
+$darkblue : #293A70;
+$ablue : #4394C9;
+$fblue : #344B8E;
+$bblue : #30BAE8;
 
 .container{
   width: 1140px!important;
@@ -187,4 +193,36 @@ background-image: linear-gradient(270deg, transparent 50%, $green 50%),
                   linear-gradient(180deg, $purple 50%, $green 50%);
 }
 }
+}
+
+
+
+#portfolio{
+  background-color: $peach;
+  text-align: center;
+  .p_image{
+    margin: auto;
+  }
+}
+
+#getintouch{
+  background-color: $blue;
+  color: $white;
+  input, textarea{
+    background-color: $darkblue;
+    border-color: $darkblue;
+    // padding-left: 10em;
+    // padding-right: 10em;
+  }
+}
+
+footer{
+  background-color: $fblue;
+  p{
+    color: $white;
+    display: inline;
+    &:hover{
+      color: $ablue;
+    }
+  }
 }
