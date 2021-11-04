@@ -1,53 +1,65 @@
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital@0;1&display=swap');
-
-$white : #FFFFFF;
-$purple : #86509C;
-$orange : #EB7D4A;
-$green : #17C1A4;
-$lightgrey: #D3D3D3;
-$grey : #A9A9A9;
-$peach : #FEDD9A;
-$blue : #3C5598;
-$darkblue : #293A70;
-$ablue : #4394C9;
-$fblue : #344B8E;
-$bblue : #30BAE8;
+// @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital@0;1&display=swap');
+@import "./scss/fonts.scss";
+@import "./scss/colors.scss";
 
 .container{
   width: 1140px!important;
   align-self: center;
+  hr{
+    width: 5rem;
+    border-top: 3px solid rgba(0,0,0,0.2);
+  }
 }
+
+h1, h2, h3, h4, h5, h6{
+  // font-family: "TitilliumWeb-Bold";
+  font-weight: bold;
+}
+p{
+  font-family: "TitilliumWeb-Light";
+}
+a, button{
+  font-family: "TitilliumWeb-BoldItalic";
+}
+
 
 header {
   background-color: $purple;
   color: $white;
+  .header_button{
+    padding: 1rem 2rem;
+    margin: 2rem auto;
+  }
   .jumbotron{
     background: none;
-    // underline: none;
-  }
-  .nav-link{
-    text-color: $white;
   }
   .nav-item{
-    text-color: $white;
+    .nav-link{
+      color: $white;
+      margin: 1rem;
+    }
+    .nav-link:hover{
+      background-color: rgba(0,0,0,0.2);
+      border-radius: 10%;
+    }
   }
-  .nav-link:hover{
-    background-color: rgba(0,0,0,0.2);
-    border-radius: 20%;
+  .navbar-collapse{
+    // margin: 1rem;
+    // color: $white;
   }
-
   a.btn{
     background-color: $orange;
     border: $orange;
+    // margin: 1rem;
     &:hover{
       background: none;
       border: $orange;
     }
   }
 
-  h2{
-    font-weight: bold;
-  }
+  // h2{
+  //   font-weight: bold;
+  // }
 }
 
 #services{
@@ -65,6 +77,7 @@ header {
         height: 150px;
         width: 150px;
         align-self: center;
+        margin: 1rem;
       }
       p{
         text-align: center;
@@ -78,13 +91,16 @@ header {
 }
 
 #team{
-  background-color: $lightgrey;
+  background-color: $xligthblue;
   align-content: center;
   display: flex;
   .container{
     .team_block{
+      padding-left: 2rem;
+      padding-right: 2rem;
       .team_icon{
-          margin: auto;
+          // margin: auto;
+          margin: 1.5rem;
           background-color: $grey;
           border-radius: 50%;
           height: 150px;
@@ -95,11 +111,15 @@ header {
       }
       .mini_team{
         display: inline-flex;
+        // align-self: center;
+        // margin: auto;
         .mini_team_icon{
+          margin: auto 0.4rem;
           img{
             height: 30px;
             width: 30px;
             background-color: grey;
+            // margin: auto 0.4rem;
             border-radius: 50%;
           }
         }
@@ -108,93 +128,79 @@ header {
   }
 }
 
-
 // #skills{
-//   .skills_block_90{
-//       .skills_block{
-//         position: relative;
-//         width: 150px;
-//         height: 150px;
-//         border: 10px solid $green;
+//   .skills_block {
+//     display: inline-block;
+//     margin: .5em;
+//     width: 8em;
+//     height: 8em;
+//     position: relative;
+//     border-radius: 50%;
+//       &:after {
 //         border-radius: 50%;
-//         margin: auto;
-//         &:before{
-//           // position: absolute;
-//           // top: 100%;
-//           // right: 0;
-//           // width: calc(100% - 100px);
-//         }
+//         display: block;
+//         background: #fff;
+//         position: absolute;
+//         left: .5em;
+//         top: .5em;
+//         height: 7em;
+//         width: 7em;
 //       }
-//   }
-//   .skills_block_70{
-//     .skills_block{
-//       position: relative;
-//       width: 150px;
-//       height: 150px;
-//       border: 10px solid $grey;
-//       border-radius: 50%;
-//       margin: auto;
+//
+//       .skills_block_90 {
+//         background-image: linear-gradient(-30deg, $purple 50%, transparent 50%),
+//                   linear-gradient(90deg, $purple 50%, $green 50%);
+//       }
+//       .skills_block_70 {
+//         background-image: linear-gradient(90deg, $purple 50%, $green 50%);
+//                 }
+//       .skills_block_75 {
+//         background-image: linear-gradient(150deg, transparent 50%, $green 50%),
+//         linear-gradient(90deg, $purple 50%, $green 50%);
+//       }
+//       .skills_block_85 {
+//         background-image: linear-gradient(270deg, transparent 50%, $green 50%),
+//         linear-gradient(180deg, $purple 50%, $green 50%);
+//       }
 //     }
-//   }
-//   .skills_block_75{
-//     .skills_block{
-//       position: relative;
-//       width: 150px;
-//       height: 150px;
-//       border: 10px solid $purple;
-//       border-radius: 50%;
-//       margin: auto;
-//     }
-//   }
-//   .skills_block_85{
-//     .skills_block{
-//       position: relative;
-//       width: 150px;
-//       height: 150px;
-//       border: 10px solid $orange;
-//       border-radius: 50%;
-//       margin: auto;
-//     }
-//   }
 // }
-
 #skills{
-  .skills_block {
-    display: inline-block;
-    margin: .5em;
-    width: 8em;
-    height: 8em;
-    position: relative;
+  .pie {
+  display: inline-block;
+  margin: .5em;
+  width: 10em;
+  height: 10em;
+  position: relative;
+  border-radius: 50%;
+  &:after {
     border-radius: 50%;
-      :after {
-        border-radius: 50%;
-        display: block;
-        content: "";
-        background: #fff;
-        position: absolute;
-        left: .5em;
-        top: .5em;
-        height: 7em;
-        width: 7em;
-      }
-.skills_block_90 {
-background-image: linear-gradient(-30deg, $purple 50%, transparent 50%),
-                  linear-gradient(90deg, $purple 50%, $green 50%);
+    display: block;
+    content: "";
+    background: #fff;
+    position: absolute;
+    left: .5em;
+    top: .5em;
+    height: 9em;
+    width: 9em;
+  }
 }
-.skills_block_70 {
-background-image: linear-gradient(90deg, $purple 50%, $green 50%);
+.p1 {
+  background-image: linear-gradient(150deg, transparent 50%, steelblue 50%),
+                    linear-gradient(90deg, $lightgrey 50%, steelblue 50%);
 }
-.skills_block_75 {
-background-image: linear-gradient(150deg, transparent 50%, $green 50%),
-                  linear-gradient(90deg, $purple 50%, $green 50%);
+.p2 {
+  background-image: linear-gradient(150deg, transparent 50%, steelblue 50%),
+                    linear-gradient(90deg, $lightgrey 50%, steelblue 50%);
 }
-.skills_block_85 {
-background-image: linear-gradient(270deg, transparent 50%, $green 50%),
-                  linear-gradient(180deg, $purple 50%, $green 50%);
+.p3 {
+  background-image: linear-gradient(150deg, transparent 50%, steelblue 50%),
+                    linear-gradient(90deg, $lightgrey 50%, steelblue 50%);
+}
+.p4 {
+  background-image: linear-gradient(150deg, transparent 50%, steelblue 50%),
+                    linear-gradient(90deg, $lightgrey 50%, steelblue 50%);
 }
 }
-}
-
 
 
 #portfolio{
@@ -203,26 +209,69 @@ background-image: linear-gradient(270deg, transparent 50%, $green 50%),
   .p_image{
     margin: auto;
   }
+  .portfolio_buttons{
+    background-color: rgba(0,0,0,0.1);
+    border: none;
+    border-radius: 5%;
+    padding: 0.5rem 1rem;
+    &:hover{
+      background-color: $white;
+    }
+  }
+  .portfolio_button{
+    background-color: $green;
+    padding: 1rem 2rem;
+    border-radius: 5%;
+    border: none;
+    color: $white;
+  }
 }
 
 #getintouch{
   background-color: $blue;
   color: $white;
-  input, textarea{
-    background-color: $darkblue;
-    border-color: $darkblue;
-    // padding-left: 10em;
-    // padding-right: 10em;
+  .form{
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+  // input, textarea{
+  //   background-color: $darkblue;
+  //   border-color: $darkblue;
+  //   // color: $white;
+  // }
+  .touch_button{
+    padding: 1rem 2rem;
+    background-color: $bblue;
+    border: none;
+    margin: auto;
+    margin: 2rem;
+    // display: grid;
+    // justify-content: center;
+  }
+  .mb-3{
+    input{
+      height: 3rem;
+      background-color: $darkblue;
+      border-color: $darkblue;
+    }
+    textarea{
+      background-color: $darkblue;
+      border-color: $darkblue;
+    }
   }
 }
 
 footer{
   background-color: $fblue;
-  p{
-    color: $white;
-    display: inline;
-    &:hover{
-      color: $ablue;
+  #footer{
+    // margin: auto;
+    align-content: center;
+    p{
+      color: $white;
+      display: inline;
+      &:hover{
+        color: $ablue;
+      }
     }
   }
 }
