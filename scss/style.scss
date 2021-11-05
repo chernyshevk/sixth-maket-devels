@@ -1,4 +1,3 @@
-// @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital@0;1&display=swap');
 @import "./scss/fonts.scss";
 @import "./scss/colors.scss";
 
@@ -8,18 +7,20 @@
   hr{
     width: 5rem;
     border-top: 3px solid rgba(0,0,0,0.2);
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
 }
 
 h1, h2, h3, h4, h5, h6{
-  // font-family: "TitilliumWeb-Bold";
-  font-weight: bold;
+  font-weight: 600 !important;
+  font-family: "TitilliumWeb-BoldItalic";
 }
 p{
   font-family: "TitilliumWeb-Light";
 }
 a, button{
-  font-family: "TitilliumWeb-BoldItalic";
+  font-family: "TitilliumWeb-Bold";
 }
 
 
@@ -27,44 +28,46 @@ header {
   background-color: $purple;
   color: $white;
   .header_button{
-    padding: 1rem 2rem;
-    margin: 2rem auto;
+    padding: 1rem 4.5rem;
+    margin: 2.5rem auto;
   }
   .jumbotron{
     background: none;
   }
-  .nav-item{
-    .nav-link{
-      color: $white;
-      margin: 1rem;
+  .navbar{
+    .navbar-collapse{
+      .navbar-nav{
+        .nav-item{
+          .nav-link{
+            color: #fff !important;
+            margin: 0rem 1rem;
+          }
+          .nav-link:hover{
+            background-color: rgba(0,0,0,0.2);
+            border-radius: 10%;
+          }
+        }
+      }
     }
-    .nav-link:hover{
-      background-color: rgba(0,0,0,0.2);
-      border-radius: 10%;
-    }
+
   }
-  .navbar-collapse{
-    // margin: 1rem;
-    // color: $white;
-  }
+img{
+  margin-left: 0 2rem;
+}
+  .navbar-collapse{}
   a.btn{
     background-color: $orange;
     border: $orange;
-    // margin: 1rem;
     &:hover{
       background: none;
       border: $orange;
     }
   }
-
-  // h2{
-  //   font-weight: bold;
-  // }
 }
 
 #services{
   background-color: $green;
-  h2{
+  h1{
     color: $white;
   }
   p{
@@ -74,14 +77,17 @@ header {
     background: none;
     border: none;
       img{
-        height: 150px;
-        width: 150px;
+        height: 170px;
+        width: 170px;
         align-self: center;
-        margin: 1rem;
+        margin: 1.5rem;
       }
       p{
         text-align: center;
         color: $white;
+      }
+      .pservices{
+        margin-top: -0.5rem;
       }
       h5{
         text-align: center;
@@ -96,31 +102,31 @@ header {
   display: flex;
   .container{
     .team_block{
-      padding-left: 2rem;
-      padding-right: 2rem;
       .team_icon{
-          // margin: auto;
-          margin: 1.5rem;
+        padding: 0 5rem;
+          margin: 2.5rem 0;
           background-color: $grey;
           border-radius: 50%;
-          height: 150px;
-          width: 150px;
+          height: 200px;
+          width: 200px;
         }
       a{
         align: center;
       }
+      .preview{
+        font-size: 1.5em;
+      }
       .mini_team{
         display: inline-flex;
-        // align-self: center;
-        // margin: auto;
+        margin: 2rem 1rem;
         .mini_team_icon{
           margin: auto 0.4rem;
           img{
             height: 30px;
             width: 30px;
             background-color: grey;
-            // margin: auto 0.4rem;
             border-radius: 50%;
+            padding: 1rem;
           }
         }
       }
@@ -128,77 +134,47 @@ header {
   }
 }
 
-// #skills{
-//   .skills_block {
-//     display: inline-block;
-//     margin: .5em;
-//     width: 8em;
-//     height: 8em;
-//     position: relative;
-//     border-radius: 50%;
-//       &:after {
-//         border-radius: 50%;
-//         display: block;
-//         background: #fff;
-//         position: absolute;
-//         left: .5em;
-//         top: .5em;
-//         height: 7em;
-//         width: 7em;
-//       }
-//
-//       .skills_block_90 {
-//         background-image: linear-gradient(-30deg, $purple 50%, transparent 50%),
-//                   linear-gradient(90deg, $purple 50%, $green 50%);
-//       }
-//       .skills_block_70 {
-//         background-image: linear-gradient(90deg, $purple 50%, $green 50%);
-//                 }
-//       .skills_block_75 {
-//         background-image: linear-gradient(150deg, transparent 50%, $green 50%),
-//         linear-gradient(90deg, $purple 50%, $green 50%);
-//       }
-//       .skills_block_85 {
-//         background-image: linear-gradient(270deg, transparent 50%, $green 50%),
-//         linear-gradient(180deg, $purple 50%, $green 50%);
-//       }
-//     }
-// }
 #skills{
   .pie {
   display: inline-block;
-  margin: .5em;
   width: 10em;
   height: 10em;
   position: relative;
   border-radius: 50%;
-  &:after {
-    border-radius: 50%;
-    display: block;
-    content: "";
-    background: #fff;
-    position: absolute;
-    left: .5em;
-    top: .5em;
-    height: 9em;
-    width: 9em;
-  }
+  padding: 0 4rem;
+    &:after {
+      border-radius: 50%;
+      display: block;
+      content: "";
+      background: #fff;
+      position: absolute;
+      left: .5em;
+      top: .5em;
+      height: 9em;
+      width: 9em;
+
+}
 }
 .p1 {
-  background-image: linear-gradient(150deg, transparent 50%, steelblue 50%),
-                    linear-gradient(90deg, $lightgrey 50%, steelblue 50%);
+  background-image: linear-gradient(150deg, transparent 50%, $blue 50%),
+                    linear-gradient(90deg, $lightgrey 50%, $blue 50%);
+                    // padding: 0 4rem;
+
 }
 .p2 {
-  background-image: linear-gradient(150deg, transparent 50%, steelblue 50%),
-                    linear-gradient(90deg, $lightgrey 50%, steelblue 50%);
+  background-image: linear-gradient(150deg, transparent 50%, $pink 50%),
+                    linear-gradient(90deg, $lightgrey 50%, $pink 50%);
+                    // padding: 0 4rem;
 }
 .p3 {
-  background-image: linear-gradient(150deg, transparent 50%, steelblue 50%),
-                    linear-gradient(90deg, $lightgrey 50%, steelblue 50%);
+  background-image: linear-gradient(150deg, transparent 50%, $green 50%),
+                    linear-gradient(90deg, $lightgrey 50%, $green 50%);
+                    // padding: 0 4rem;
 }
 .p4 {
-  background-image: linear-gradient(150deg, transparent 50%, steelblue 50%),
-                    linear-gradient(90deg, $lightgrey 50%, steelblue 50%);
+  background-image: linear-gradient(150deg, transparent 50%, $orange 50%),
+                    linear-gradient(90deg, $lightgrey 50%, $orange 50%);
+                    // padding: 0 4rem;
 }
 }
 
@@ -208,6 +184,8 @@ header {
   text-align: center;
   .p_image{
     margin: auto;
+
+
   }
   .portfolio_buttons{
     background-color: rgba(0,0,0,0.1);
@@ -227,6 +205,23 @@ header {
   }
 }
 
+#people{
+  background-color: $pink;
+  color: $white;
+    .testimonial{
+      padding: 3.5rem;
+      // font-size: 1rem;
+    }
+    .testimoinal-author-avatar{
+      background-color: $grey;
+      height: 100px;
+      border-radius: 50%;
+      width: 100px;
+      // float: left;
+      margin: 3rem 0rem;
+    }
+}
+
 #getintouch{
   background-color: $blue;
   color: $white;
@@ -234,21 +229,15 @@ header {
     padding-left: 10rem;
     padding-right: 10rem;
   }
-  // input, textarea{
-  //   background-color: $darkblue;
-  //   border-color: $darkblue;
-  //   // color: $white;
-  // }
   .touch_button{
-    padding: 1rem 2rem;
+    padding: 1rem 4.5rem;
     background-color: $bblue;
     border: none;
     margin: auto;
-    margin: 2rem;
-    // display: grid;
-    // justify-content: center;
+    margin: 3rem;
   }
   .mb-3{
+    padding: 0 2rem;
     input{
       height: 3rem;
       background-color: $darkblue;
@@ -257,6 +246,7 @@ header {
     textarea{
       background-color: $darkblue;
       border-color: $darkblue;
+      
     }
   }
 }
@@ -264,7 +254,6 @@ header {
 footer{
   background-color: $fblue;
   #footer{
-    // margin: auto;
     align-content: center;
     p{
       color: $white;
