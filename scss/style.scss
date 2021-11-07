@@ -104,7 +104,7 @@ img{
     .team_block{
       .team_icon{
         padding: 0 5rem;
-          margin: 2.5rem 0;
+          margin: 2.5rem auto;
           background-color: $grey;
           border-radius: 50%;
           height: 200px;
@@ -118,17 +118,17 @@ img{
       }
       .mini_team{
         display: inline-flex;
-        margin: 2rem 1rem;
-        .mini_team_icon{
-          margin: auto 0.4rem;
+        margin: 0 3.5rem;
+        width: 100%;
           img{
             height: 30px;
             width: 30px;
-            background-color: grey;
+            //background-color: grey;
             border-radius: 50%;
-            padding: 1rem;
+            //padding: 1rem;
+            margin: .1rem;
           }
-        }
+
       }
     }
   }
@@ -136,24 +136,35 @@ img{
 
 #skills{
   .pie {
-  display: inline-block;
-  width: 10em;
-  height: 10em;
-  position: relative;
+  //display: inline-block;
+  //width: 10em;
+  //height: 10em;
+  //position: relative;
   border-radius: 50%;
-  padding: 0 4rem;
-    &:after {
-      border-radius: 50%;
-      display: block;
-      content: "";
-      background: #fff;
-      position: absolute;
-      left: .5em;
-      top: .5em;
-      height: 9em;
-      width: 9em;
+//padding: 0 2rem;
 
-}
+    //padding: 0 4rem;
+  //  margin: 3rem;
+//    &:after {
+//      border-radius: 50%;
+//      display: block;
+//      content: "";
+//      background: #fff;
+//      position: absolute;
+//      left: .5em;
+//      top: .5em;
+//      height: 9em;
+//      width: 9em;
+//}
+    .p_content{
+      //display: inline-block;
+      //width: 9em;
+      //height: 9em;
+      //position: relative;
+      border-radius: 50%;
+      padding: 5rem 5rem;
+      background-color: $white;
+    }
 }
 .p1 {
   background-image: linear-gradient(150deg, transparent 50%, $blue 50%),
@@ -182,10 +193,11 @@ img{
 #portfolio{
   background-color: $peach;
   text-align: center;
-  .p_image{
-    margin: auto;
-
-
+  .p_image img{
+    //margin: auto;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
   }
   .portfolio_buttons{
     background-color: rgba(0,0,0,0.1);
@@ -233,11 +245,10 @@ img{
     padding: 1rem 4.5rem;
     background-color: $bblue;
     border: none;
-    margin: auto;
-    margin: 3rem;
+    margin: 3rem auto;
   }
   .mb-3{
-    padding: 0 2rem;
+    //padding: 0 2rem;
     input{
       height: 3rem;
       background-color: $darkblue;
@@ -254,7 +265,7 @@ img{
 footer{
   background-color: $fblue;
   #footer{
-    align-content: center;
+    text-align: center;
     p{
       color: $white;
       display: inline;
