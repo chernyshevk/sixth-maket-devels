@@ -102,6 +102,10 @@ img{
   display: flex;
   .container{
     .team_block{
+      display: flex;
+      justify-content: center;
+
+      flex-direction: column;
       .team_icon{
         padding: 0 5rem;
           margin: 2.5rem auto;
@@ -117,15 +121,12 @@ img{
         font-size: 1.5em;
       }
       .mini_team{
-        display: inline-flex;
-        margin: 0 3.5rem;
         width: 100%;
+        text-align: center;
           img{
             height: 30px;
             width: 30px;
-            //background-color: grey;
             border-radius: 50%;
-            //padding: 1rem;
             margin: .1rem;
           }
 
@@ -135,58 +136,13 @@ img{
 }
 
 #skills{
-  .pie {
-  //display: inline-block;
-  //width: 10em;
-  //height: 10em;
-  //position: relative;
-  border-radius: 50%;
-//padding: 0 2rem;
-
-    //padding: 0 4rem;
-  //  margin: 3rem;
-//    &:after {
-//      border-radius: 50%;
-//      display: block;
-//      content: "";
-//      background: #fff;
-//      position: absolute;
-//      left: .5em;
-//      top: .5em;
-//      height: 9em;
-//      width: 9em;
-//}
-    .p_content{
-      //display: inline-block;
-      //width: 9em;
-      //height: 9em;
-      //position: relative;
-      border-radius: 50%;
-      padding: 5rem 5rem;
-      background-color: $white;
+    img{
+      margin: auto 2rem;
     }
-}
-.p1 {
-  background-image: linear-gradient(150deg, transparent 50%, $blue 50%),
-                    linear-gradient(90deg, $lightgrey 50%, $blue 50%);
-                    // padding: 0 4rem;
-
-}
-.p2 {
-  background-image: linear-gradient(150deg, transparent 50%, $pink 50%),
-                    linear-gradient(90deg, $lightgrey 50%, $pink 50%);
-                    // padding: 0 4rem;
-}
-.p3 {
-  background-image: linear-gradient(150deg, transparent 50%, $green 50%),
-                    linear-gradient(90deg, $lightgrey 50%, $green 50%);
-                    // padding: 0 4rem;
-}
-.p4 {
-  background-image: linear-gradient(150deg, transparent 50%, $orange 50%),
-                    linear-gradient(90deg, $lightgrey 50%, $orange 50%);
-                    // padding: 0 4rem;
-}
+    text-align: center;
+    h4{
+      margin: 2rem auto;
+    }
 }
 
 
@@ -194,7 +150,6 @@ img{
   background-color: $peach;
   text-align: center;
   .p_image img{
-    //margin: auto;
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -222,14 +177,12 @@ img{
   color: $white;
     .testimonial{
       padding: 3.5rem;
-      // font-size: 1rem;
     }
     .testimoinal-author-avatar{
       background-color: $grey;
       height: 100px;
       border-radius: 50%;
       width: 100px;
-      // float: left;
       margin: 3rem 0rem;
     }
 }
@@ -248,7 +201,6 @@ img{
     margin: 3rem auto;
   }
   .mb-3{
-    //padding: 0 2rem;
     input{
       height: 3rem;
       background-color: $darkblue;
@@ -257,7 +209,7 @@ img{
     textarea{
       background-color: $darkblue;
       border-color: $darkblue;
-      
+
     }
   }
 }
@@ -269,6 +221,7 @@ footer{
     p{
       color: $white;
       display: inline;
+      font-size: 1.5rem;
       &:hover{
         color: $ablue;
       }
