@@ -1,228 +1,484 @@
-@import "./scss/fonts.scss";
-@import "./scss/colors.scss";
+@import "fonts.scss";
+@import "colors.scss";
 
-.container{
-  width: 1140px!important;
+.container {
+  max-width: 1140px;
   align-self: center;
-  hr{
+  hr {
     width: 5rem;
-    border-top: 3px solid rgba(0,0,0,0.2);
+    border-top: 3px solid rgba(0, 0, 0, 0.2);
     margin-bottom: 0;
     padding-bottom: 0;
   }
 }
-
-h1, h2, h3, h4, h5, h6{
-  font-weight: 600 !important;
-  font-family: "TitilliumWeb-BoldItalic";
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  font-family: "TitilliumWeb-BoldItalic", sans-serif;
 }
-p{
-  font-family: "TitilliumWeb-Light";
+p {
+  font-family: "TitilliumWeb-Light", sans-serif;
 }
-a, button{
-  font-family: "TitilliumWeb-Bold";
+a, button {
+  font-family: "TitilliumWeb-Bold", sans-serif;
 }
-
+body {
+  margin: auto;
+}
 
 header {
   background-color: $purple;
   color: $white;
-  .header_button{
-    padding: 1rem 4.5rem;
+  padding-top: 12px;
+
+  .header_button {
+    padding: 1.3rem 4.8rem;
     margin: 2.5rem auto;
+    font-size: 17px;
   }
-  .jumbotron{
+  .jumbotron {
     background: none;
+    padding-bottom: 2.8rem;
+    @media (min-width: 1000px) {
+      h1 {
+        margin-left: -57px;
+      }
+    }
+    h1 {
+      font-size: 40px;
+      word-spacing: -4px;
+    }
   }
-  .navbar{
-    .navbar-collapse{
-      .navbar-nav{
-        .nav-item{
-          .nav-link{
-            color: #fff !important;
-            margin: 0rem 1rem;
-          }
-          .nav-link:hover{
-            background-color: rgba(0,0,0,0.2);
-            border-radius: 10%;
+  .navbar {
+    padding: 30px 56px;
+    width: 100%;
+    .navbar-collapse {
+      .navbar-nav {
+        .nav-item {
+          .nav-link {
+            display: block;
+            color: $white;
+            margin-right: 27px;
+            word-spacing: 5px;
+            letter-spacing: -1px;
+            &:hover {
+              background-color: rgba(0, 0, 0, 0.2);
+              border-radius: 10%;
+            }
           }
         }
       }
     }
 
   }
-img{
-  margin-left: 0 2rem;
-}
-  .navbar-collapse{}
-  a.btn{
+
+  img {
+    margin-left: 0 2rem;
+  }
+
+  .navbar-collapse {
+  }
+
+  a.btn {
     background-color: $orange;
     border: $orange;
-    &:hover{
+    margin-top: 47px;
+    height: 65px;
+    margin-right: 55px;
+
+    &:hover {
       background: none;
       border: $orange;
     }
   }
 }
 
-#services{
+#services {
   background-color: $green;
-  h1{
+  padding: 1.5rem 1.5rem 54px 1.5rem;
+
+  h1 {
     color: $white;
+    padding: 0.4rem 0rem;
+    letter-spacing: 0.5px;
+    margin-left: -55px;
   }
-  p{
+
+  hr {
+    margin: 0;
+    margin-left: -50px;
+    margin-top: -3px;
+  }
+
+  p {
     color: $white;
+    margin-top: -10px;
+    word-spacing: 0.5px;
+    letter-spacing: 1px;
+    margin-left: -46px;
   }
-  .card{
+
+  .card {
     background: none;
     border: none;
-      img{
-        height: 170px;
-        width: 170px;
-        align-self: center;
-        margin: 1.5rem;
+
+    img {
+      height: 170px;
+      width: 170px;
+      align-self: center;
+      margin-top: 2.5rem;
+    }
+    @media (min-width: 1000px) {
+      .s4{
+        margin-right: 18px;
       }
-      p{
-        text-align: center;
-        color: $white;
+      .s3{
+        margin-right: 54px;
       }
-      .pservices{
-        margin-top: -0.5rem;
+      .s2{
+        margin-right: 60px;
       }
-      h5{
-        text-align: center;
-        color: $white;
+      .s1{
+        margin-right: 82px;
       }
+
+    }
+    p {
+      color: $white;
+      margin-top: 15px;
+    }
+    h5 {
+      color: $white;
+    }
+    @media(min-width: 1000px){
+      .st1{
+        margin-top: 15px;
+        margin-left: -10px;
+        font-size: 23px;
+        letter-spacing: -0.5px;
+      }
+      .st2{
+        font-size: 23px;
+        margin-top: 15px;
+        margin-left: 18px;
+        letter-spacing: -0.5px;
+      }
+      .st3{
+        font-size: 23px;
+        margin-top: 15px;
+        margin-left: -10px;
+        letter-spacing: -0.5px;
+      }
+      .st4{
+        font-size: 23px;
+        margin-top: 15px;
+        margin-left: -9px;
+        letter-spacing: -0.5px;
+      }
+    }
   }
 }
 
-#team{
+#team {
   background-color: $xligthblue;
   align-content: center;
   display: flex;
-  .container{
-    .team_block{
-      display: flex;
-      justify-content: center;
+  padding: 3rem 3rem 65px 3rem;
 
+  h1 {
+    letter-spacing: 0.5px;
+    margin-top: -5px;
+    margin-left: -50px;
+  }
+
+  p {
+    font-weight: 25px;
+    word-spacing: 0.5px;
+    letter-spacing: 1px;
+    margin-left: -46px;
+  }
+
+  hr {
+    margin-top: -2px;
+  }
+
+  .container {
+    .team_block {
+      display: flex;
+      margin: 0 auto;
+      justify-content: center;
       flex-direction: column;
-      .team_icon{
-        padding: 0 5rem;
-          margin: 2.5rem auto;
-          background-color: $grey;
-          border-radius: 50%;
-          height: 200px;
-          width: 200px;
+      .team_icon {
+        margin: 1.9rem 1rem;
+        background-color: $grey;
+        border-radius: 50%;
+        height: 200px;
+        width: 200px;
         }
-      a{
-        align: center;
+      @media (min-width: 1000px) {
+        .t1 {
+          margin-left: -3px;
+        }
       }
-      .preview{
+      h4 {
+        margin-top: 5px;
+      }
+      .preview {
         font-size: 1.5em;
       }
-      .mini_team{
+      p a{
+        margin: 5px auto;
+        @media (min-width: length(1000)) {
+            margin-top: -50px;
+        }
+      }
+      .mini_team {
         width: 100%;
         text-align: center;
-          img{
-            height: 30px;
-            width: 30px;
-            border-radius: 50%;
-            margin: .1rem;
-          }
-
+      }
+      @media (min-width: 1000px) {
+        .i1 {
+          margin-top: 10px;
+          margin-left: -10px;
+        }
+        .i2 {
+          margin-left: -5px;
+          margin-top: 10px;
+        }
+        .i3 {
+          margin-left: 5px;
+          margin-top: 10px;
+        }
+        .i4 {
+          margin-left: 10px;
+          margin-top: 10px;
+        }
+        img {
+          height: 30px;
+          width: 30px;
+          border-radius: 50%;
+          margin: 0 .3rem;
+        }
       }
     }
   }
 }
 
-#skills{
-    img{
-      margin: auto 2rem;
+#skills {
+  margin: 3.7rem 3.7rem 2.3rem 3.7rem;
+  h1 {
+    margin-left: -60px;
+  }
+  hr {
+    margin-top: 10px;
+  }
+  p {
+    margin-top: 5px;
+    font-size: 18px;
+    margin-left: -46px;
+
+  }
+  img {
+    margin: 2.5rem;
+    height: 170px;
+    width: 170px;
+  }
+  @media(min-width: 1000px) {
+    .c1 {
+      margin-left: -2.175rem;
+      width: 65%;
     }
-    text-align: center;
-    h4{
-      margin: 2rem auto;
-    }
+  }
+
+  text-align: center;
+  h4 {
+    margin-top: -35px;
+  }
 }
 
-
-#portfolio{
+#portfolio {
   background-color: $peach;
   text-align: center;
-  .p_image img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+  padding: 3rem 3rem 0 3rem;
+
+  h1 {
+    margin-top: -11px;
+    margin-left: -54px;
   }
-  .portfolio_buttons{
-    background-color: rgba(0,0,0,0.1);
+  .col-12 p {
+    margin-top: -5px;
+    word-spacing: 0.5px;
+    letter-spacing: 1px;
+    margin-left: -46px;
+  }
+  .pb {
+    padding: 0 3rem 0 0
+  }
+  .card {
+    background-color: $peach;
+    padding-right: 20px;
+    padding-top: 30px;
+    img {
+      height: 100%;
+      width: 110%;
+      object-fit: cover;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (min-width: 1000px) {
+      .pi1{
+        margin-top: 15px;
+        margin-left: -55px;
+      }
+      .p1{
+          font-size: 18px;
+        margin-top: 5px;
+        margin-left: -60px;
+        letter-spacing: -1px;
+      }
+      .pi3{
+        margin-left: -50px;
+      }
+      .p3{
+        letter-spacing: -1px;
+        font-size: 18px;
+        margin-left: -80px;
+        margin-top: 8px;
+      }
+      .pi2{
+        margin-top: 20px;
+        margin-left: -35px;
+      }
+      .p2{
+        letter-spacing: -1px;
+        font-size: 18px;
+        margin-left: -19px;
+      }
+      .pi4{
+        margin-top: 10px;
+        margin-left: -35px;
+      }
+      .p4{
+        letter-spacing: -1px;
+        font-size: 18px;
+        margin-left: -14px;
+        margin-top: -2px;
+
+      }
+
+    }
+  }
+
+  .portfolio_buttons {
+    background-color: rgba(0, 0, 0, 0.1);
     border: none;
     border-radius: 5%;
-    padding: 0.5rem 1rem;
-    &:hover{
+    padding: 0.5rem 1.5rem;
+    margin: 0.5rem 0 0.25rem;
+    &:hover {
       background-color: $white;
     }
   }
-  .portfolio_button{
+  .portfolio_button {
     background-color: $green;
-    padding: 1rem 2rem;
+    padding: 1.5rem 3rem;
     border-radius: 5%;
     border: none;
+    font-size: 17px;
+    margin-left: -60px;
+    margin-top: -5px;
     color: $white;
   }
 }
 
-#people{
+#people {
   background-color: $pink;
   color: $white;
-    .testimonial{
-      padding: 3.5rem;
+  padding: 2.5rem;
+  margin-bottom: -45px;
+  h1 {
+    margin-top: 15px;
+    margin-left: -50px;
+  }
+  hr {
+    margin-top: -5px;
+  }
+  .col-12 p {
+    margin-top: 15px;
+  }
+  .testimoniald {
+    padding: 0.5rem 0;
+  }
+  .testimonial {
+    padding: 3.5rem;
+  }
+  .testimoinal-author-avatar {
+    background-color: $grey;
+    height: 100px;
+    border-radius: 50%;
+    width: 100px;
+    margin: 3rem 0rem;
+  }
+
+    @media(min-width: 1000px){
+      .b1, .bi1, .b3, .bi3{
+        margin-left: -50px;
+      }
     }
-    .testimoinal-author-avatar{
-      background-color: $grey;
-      height: 100px;
-      border-radius: 50%;
-      width: 100px;
-      margin: 3rem 0rem;
-    }
+
+
 }
 
-#getintouch{
+#getintouch {
   background-color: $blue;
   color: $white;
-  .form{
+  margin-bottom: -50px;
+  h1 {
+    margin-left: -40px;
+  }
+  hr {
+    margin-top: -15px;
+  }
+  .form {
     padding-left: 10rem;
     padding-right: 10rem;
   }
-  .touch_button{
-    padding: 1rem 4.5rem;
+  .touch_button {
+    padding: 1.2rem 4rem;
     background-color: $bblue;
     border: none;
-    margin: 3rem auto;
+    margin-top: 40px;
+    margin-left: -50px;
   }
-  .mb-3{
-    input{
-      height: 3rem;
+  .mb-3 {
+    input {
+      height: 3.5rem;
+      margin-top: -15px;
+      width: 25rem;
       background-color: $darkblue;
       border-color: $darkblue;
     }
-    textarea{
+    textarea {
       background-color: $darkblue;
       border-color: $darkblue;
-
+      margin: 10px;
+      height: 13rem;
+      width: 52rem;
+      margin-left: -60px;
     }
   }
 }
 
-footer{
+footer {
   background-color: $fblue;
-  #footer{
+  #footer {
     text-align: center;
-    p{
+    word-spacing: 30px;
+    p {
       color: $white;
       display: inline;
       font-size: 1.5rem;
-      &:hover{
+      &:hover {
         color: $ablue;
       }
     }

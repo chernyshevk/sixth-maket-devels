@@ -16,9 +16,4 @@ function css_style(done){
   done();
 }
 
-// function printHello(done){
-//   console.log("all is working");
-//   done();
-// }
-
 gulp.task(css_style);

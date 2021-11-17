@@ -1,12 +1,11 @@
 {
-  "name": "gulp",
+  "name": "ivanka",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "ivanka",
   "license": "ISC",
   "devDependencies": {
     "gulp": "^4.0.2",
@@ -18,5 +17,18 @@
   "dependencies": {
     "gulp-sass": "^5.0.0",
     "sass": "^1.43.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chernyshevk/sixth-maket-devels.git"
+  },
+  "keywords": [
+    "my",
+    "project"
+  ],
+  "bugs": {
+    "url": "https://github.com/chernyshevk/sixth-maket-devels/issues"
+  },
+  "homepage": "https://github.com/chernyshevk/sixth-maket-devels#readme",
+  "description": ""
 }
