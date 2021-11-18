@@ -95,7 +95,7 @@ header {
 #services {
   background-color: $green;
   padding: 1.5rem 1.5rem 54px 1.5rem;
-
+  text-align: center;
   h1 {
     color: $white;
     padding: 0.4rem 0rem;
@@ -208,7 +208,7 @@ header {
       justify-content: center;
       flex-direction: column;
       .team_icon {
-        margin: 1.9rem 1rem;
+        margin: 1.9rem auto;
         background-color: $grey;
         border-radius: 50%;
         height: 200px;
@@ -269,7 +269,8 @@ header {
     margin-left: -60px;
   }
   hr {
-    margin-top: 10px;
+    margin-top: -5px;
+    margin-bottom: 5px;
   }
   p {
     margin-top: 5px;
@@ -292,6 +293,7 @@ header {
   text-align: center;
   h4 {
     margin-top: -35px;
+    //text-align: center;
   }
 }
 
@@ -299,6 +301,7 @@ header {
   background-color: $peach;
   text-align: center;
   padding: 3rem 3rem 0 3rem;
+  margin-bottom: -0.5rem;
 
   h1 {
     margin-top: -11px;
@@ -385,8 +388,8 @@ header {
     border-radius: 5%;
     border: none;
     font-size: 17px;
-    margin-left: -60px;
-    margin-top: -5px;
+    margin-left: -85px;
+    margin-top: -15px;
     color: $white;
   }
 }
@@ -395,7 +398,7 @@ header {
   background-color: $pink;
   color: $white;
   padding: 2.5rem;
-  margin-bottom: -45px;
+  margin-bottom: -40px;
   h1 {
     margin-top: 15px;
     margin-left: -50px;
@@ -404,10 +407,14 @@ header {
     margin-top: -5px;
   }
   .col-12 p {
-    margin-top: 15px;
+    margin-top: 12px;
+    margin-left: -59px;
   }
   .testimoniald {
     padding: 0.5rem 0;
+    p{
+      font-size: 18px;
+    }
   }
   .testimonial {
     padding: 3.5rem;
@@ -424,6 +431,21 @@ header {
       .b1, .bi1, .b3, .bi3{
         margin-left: -50px;
       }
+      .td1{
+        margin: -1rem;
+        h3{
+          margin-top: 30px;
+        }
+        span{
+          margin-top: -10px;
+        }
+      }
+      .td2{
+        margin-top: 1.5rem;
+        h3{
+          margin-top: 32px;
+        }
+      }
     }
 
 
@@ -439,38 +461,56 @@ header {
   hr {
     margin-top: -15px;
   }
-  .form {
-    padding-left: 10rem;
-    padding-right: 10rem;
-  }
+
   .touch_button {
-    padding: 1.2rem 4rem;
+    padding: 1.2rem 4.5rem;
     background-color: $bblue;
     border: none;
+    font-size: 18px;
     margin-top: 40px;
     margin-left: -50px;
   }
+  @media (min-width: 1000px) {
+    .form {
+      padding-left: 10rem;
+      padding-right: 10rem;
+    }
+    .mb-3 {
+      input {
+        height: 3.5rem;
+        margin-top: -15px;
+        width: 26rem;
+      }
+      .ip1{
+        margin-left: -60px;
+      }
+      .ip2{
+        margin-left: -28px;
+      }
+      textarea {
+        margin: 10px;
+        height: 13rem;
+        width: 53.5rem;
+        margin-left: -60px;
+      }
+    }
+  }
   .mb-3 {
     input {
-      height: 3.5rem;
-      margin-top: -15px;
-      width: 25rem;
       background-color: $darkblue;
       border-color: $darkblue;
     }
     textarea {
       background-color: $darkblue;
       border-color: $darkblue;
-      margin: 10px;
-      height: 13rem;
-      width: 52rem;
-      margin-left: -60px;
     }
   }
 }
 
 footer {
   background-color: $fblue;
+  white-space: nowrap;
+
   #footer {
     text-align: center;
     word-spacing: 30px;
@@ -480,6 +520,16 @@ footer {
       font-size: 1.5rem;
       &:hover {
         color: $ablue;
+      }
+    }
+    @media (min-width: 1000px) {
+      col-12{
+        margin-left: -20px;
+        //padding: 5rem;
+      }
+      p{
+        margin-left: -10px;
+        margin-top: 10px;
       }
     }
   }
